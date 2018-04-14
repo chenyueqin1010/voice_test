@@ -20,14 +20,14 @@ $(function(){
 				'X-Appid': "5ad05bef",
                 'X-CurTime': time,
                 'X-Param': x_param,
-                'X-CheckSum': md5(apiKey+time+x_param)
+                'X-CheckSum': md5(apiKey+time+x_param),
+				'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'
 			},
 			url: "http://api.xfyun.cn/v1/service/v1/iat",
 			data: {
 				"audio": audioData
 			},
 			type: "post",
-			dataType: "jsonp",
 			beforeSend: function () {
 				console.log("语音识别中……");
 			},
