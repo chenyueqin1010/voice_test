@@ -28,6 +28,7 @@ $(function(){
 				"audio": audioData
 			},
 			type: "post",
+			dataType: "jsonp",
 			beforeSend: function () {
 				console.log("语音识别中……");
 			},
