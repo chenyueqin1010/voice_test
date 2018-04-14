@@ -23,7 +23,7 @@ $(function(){
                 'X-CheckSum': md5(apiKey+time+x_param),
 				'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'
 			},
-			url: "http://api.xfyun.cn/v1/service/v1/iat",
+			url: "http://api.xfyun.cn/v1/aiui/v1/iat",
 			data: {
 				"audio": audioData
 			},
