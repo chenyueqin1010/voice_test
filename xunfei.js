@@ -11,7 +11,7 @@ $(function(){
 		stop_recorder();
 		
 		var audioData = get_recorder_data();
-		var apiKey = "90a8992074386bf1502c357e37139232";
+		var apiKey = "c9e1b289d3d64c1280f383e43829aeea";
 		var time = new Date().getTime();
 		var x_param = "eyJlbmdpbmVfdHlwZSI6ICJzbXMxNmsiLCJhdWUiOiAicmF3In0";
 		
@@ -23,12 +23,11 @@ $(function(){
                 'X-CheckSum': md5(apiKey+time+x_param),
 				'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'
 			},
-			url: "http://api.xfyun.cn/v1/service/v1/iat",
+			url: "http://api.xfyun.cn/v1/aiui/v1/iat",
 			data: {
 				"audio": audioData
 			},
 			type: "post",
-			dataType: "jsonp",
 			beforeSend: function () {
 				console.log("语音识别中……");
 			},
