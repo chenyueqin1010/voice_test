@@ -11,19 +11,19 @@ $(function(){
 		stop_recorder();
 		
 		var audioData = get_recorder_data();
-		var apiKey = "2d54f7bcbb2d41fbba1bbf6dfb391718";
+		var apiKey = "90a8992074386bf1502c357e37139232";
 		var time = new Date().getTime();
 		var x_param = "eyJlbmdpbmVfdHlwZSI6ICJzbXMxNmsiLCJhdWUiOiAicmF3In0";
 		
 		$.ajax({
 			 headers: {
-				'X-Appid': "5ad05bef",
+				'X-Appid': "5ad6a1db",
                 'X-CurTime': time,
                 'X-Param': x_param,
                 'X-CheckSum': md5(apiKey+time+x_param),
 				'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'
 			},
-			url: "http://api.xfyun.cn/v1/aiui/v1/iat",
+			url: "http://api.xfyun.cn/v1/service/v1/iat",
 			data: {
 				"audio": audioData
 			},
